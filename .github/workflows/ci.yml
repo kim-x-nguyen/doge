@@ -28,18 +28,18 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: |
-        cd doge
+        cd my-app
         npm ci
     - name: Build the app
       run: |
-        cd doge
+        cd my-app
         npm run build
     - name: Run component tests
       run: |
-        cd doge
+        cd my-app
         npm run test
     - name: Start the app
       run: |
-        cd doge
+        cd my-app
         npm run start &
         npx wait-on --timeout 60000
